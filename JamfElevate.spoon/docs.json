@@ -1,0 +1,183 @@
+[
+  {
+    "Constant": [],
+    "Variable": [],
+    "Method": [
+      {
+        "doc": "Logs a message to the log file and Hammerspoon console\n\nParameters:\n * message - String to log",
+        "name": "log",
+        "parameters": [
+          " * message - String to log"
+        ],
+        "signature": "JamfElevate:log(message)"
+      },
+      {
+        "doc": "Checks if the current user has admin privileges\n\nReturns:\n * true if user is admin, false otherwise",
+        "name": "checkAdminStatus",
+        "returns": [
+          " * true if user is admin, false otherwise"
+        ],
+        "signature": "JamfElevate:checkAdminStatus()"
+      },
+      {
+        "doc": "Checks if current time is within business hours (weekday 7am-5pm)\n\nReturns:\n * true if within business hours, false otherwise",
+        "name": "isBusinessHours",
+        "returns": [
+          " * true if within business hours, false otherwise"
+        ],
+        "signature": "JamfElevate:isBusinessHours()"
+      },
+      {
+        "doc": "Shows a confirmation dialog asking user to elevate privileges\n\nReturns:\n * true if user confirmed, false if cancelled",
+        "name": "showConfirmationDialog",
+        "returns": [
+          " * true if user confirmed, false if cancelled"
+        ],
+        "signature": "JamfElevate:showConfirmationDialog()"
+      },
+      {
+        "doc": "Clicks the 'Request Admin Privileges' menu item in Jamf Connect\n\nReturns:\n * true if successful, false otherwise",
+        "name": "clickMenubarItem",
+        "returns": [
+          " * true if successful, false otherwise"
+        ],
+        "signature": "JamfElevate:clickMenubarItem()"
+      },
+      {
+        "doc": "Main function that checks admin status and prompts for elevation if needed",
+        "name": "checkAndElevate",
+        "signature": "JamfElevate:checkAndElevate()"
+      },
+      {
+        "doc": "Starts the periodic check timer\n\nReturns:\n * The JamfElevate object",
+        "name": "start",
+        "returns": [
+          " * The JamfElevate object"
+        ],
+        "signature": "JamfElevate:start()"
+      },
+      {
+        "doc": "Stops the periodic check timer\n\nReturns:\n * The JamfElevate object",
+        "name": "stop",
+        "returns": [
+          " * The JamfElevate object"
+        ],
+        "signature": "JamfElevate:stop()"
+      },
+      {
+        "doc": "Manually trigger an elevation check (bypasses business hours check)",
+        "name": "manualCheck",
+        "signature": "JamfElevate:manualCheck()"
+      },
+      {
+        "doc": "Binds hotkeys for the Spoon\n\nParameters:\n * mapping - A table containing hotkey modifier/key details for the following items:\n  * manualCheck - Manually trigger an elevation check\n\nExample:\n```\nspoon.JamfElevate:bindHotkeys({\n  manualCheck = {{\"cmd\", \"alt\", \"ctrl\"}, \"E\"}\n})\n```",
+        "name": "bindHotkeys",
+        "parameters": [
+          " * mapping - A table containing hotkey modifier/key details for the following items:",
+          "  * manualCheck - Manually trigger an elevation check",
+          "",
+          "Example:",
+          "```",
+          "spoon.JamfElevate:bindHotkeys({",
+          "  manualCheck = {{\"cmd\", \"alt\", \"ctrl\"}, \"E\"}",
+          "})",
+          "```"
+        ],
+        "signature": "JamfElevate:bindHotkeys(mapping)"
+      }
+    ],
+    "Command": [],
+    "Constructor": [],
+    "Field": [],
+    "desc": "Automatically prompts to request admin privileges via Jamf Connect during business hours",
+    "doc": "Automatically prompts to request admin privileges via Jamf Connect during business hours\n\nDownload: [https://github.com/yourusername/JamfElevate.spoon](https://github.com/yourusername/JamfElevate.spoon)",
+    "items": [
+      {
+        "doc": "Logs a message to the log file and Hammerspoon console\n\nParameters:\n * message - String to log",
+        "name": "log",
+        "parameters": [
+          " * message - String to log"
+        ],
+        "signature": "JamfElevate:log(message)"
+      },
+      {
+        "doc": "Checks if the current user has admin privileges\n\nReturns:\n * true if user is admin, false otherwise",
+        "name": "checkAdminStatus",
+        "returns": [
+          " * true if user is admin, false otherwise"
+        ],
+        "signature": "JamfElevate:checkAdminStatus()"
+      },
+      {
+        "doc": "Checks if current time is within business hours (weekday 7am-5pm)\n\nReturns:\n * true if within business hours, false otherwise",
+        "name": "isBusinessHours",
+        "returns": [
+          " * true if within business hours, false otherwise"
+        ],
+        "signature": "JamfElevate:isBusinessHours()"
+      },
+      {
+        "doc": "Shows a confirmation dialog asking user to elevate privileges\n\nReturns:\n * true if user confirmed, false if cancelled",
+        "name": "showConfirmationDialog",
+        "returns": [
+          " * true if user confirmed, false if cancelled"
+        ],
+        "signature": "JamfElevate:showConfirmationDialog()"
+      },
+      {
+        "doc": "Clicks the 'Request Admin Privileges' menu item in Jamf Connect\n\nReturns:\n * true if successful, false otherwise",
+        "name": "clickMenubarItem",
+        "returns": [
+          " * true if successful, false otherwise"
+        ],
+        "signature": "JamfElevate:clickMenubarItem()"
+      },
+      {
+        "doc": "Main function that checks admin status and prompts for elevation if needed",
+        "name": "checkAndElevate",
+        "signature": "JamfElevate:checkAndElevate()"
+      },
+      {
+        "doc": "Starts the periodic check timer\n\nReturns:\n * The JamfElevate object",
+        "name": "start",
+        "returns": [
+          " * The JamfElevate object"
+        ],
+        "signature": "JamfElevate:start()"
+      },
+      {
+        "doc": "Stops the periodic check timer\n\nReturns:\n * The JamfElevate object",
+        "name": "stop",
+        "returns": [
+          " * The JamfElevate object"
+        ],
+        "signature": "JamfElevate:stop()"
+      },
+      {
+        "doc": "Manually trigger an elevation check (bypasses business hours check)",
+        "name": "manualCheck",
+        "signature": "JamfElevate:manualCheck()"
+      },
+      {
+        "doc": "Binds hotkeys for the Spoon\n\nParameters:\n * mapping - A table containing hotkey modifier/key details for the following items:\n  * manualCheck - Manually trigger an elevation check\n\nExample:\n```\nspoon.JamfElevate:bindHotkeys({\n  manualCheck = {{\"cmd\", \"alt\", \"ctrl\"}, \"E\"}\n})\n```",
+        "name": "bindHotkeys",
+        "parameters": [
+          " * mapping - A table containing hotkey modifier/key details for the following items:",
+          "  * manualCheck - Manually trigger an elevation check",
+          "",
+          "Example:",
+          "```",
+          "spoon.JamfElevate:bindHotkeys({",
+          "  manualCheck = {{\"cmd\", \"alt\", \"ctrl\"}, \"E\"}",
+          "})",
+          "```"
+        ],
+        "signature": "JamfElevate:bindHotkeys(mapping)"
+      }
+    ],
+    "name": "JamfElevate",
+    "stripped_doc": "\nDownload: [https://github.com/yourusername/JamfElevate.spoon](https://github.com/yourusername/JamfElevate.spoon)",
+    "submodules": [],
+    "type": "Module"
+  }
+]
