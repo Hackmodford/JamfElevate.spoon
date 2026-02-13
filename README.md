@@ -109,10 +109,3 @@ If the Spoon can't find the "Request Admin Privileges" menu item, ensure:
 ## License
 
 MIT License - See LICENSE file for details
-
-## Original Scripts
-
-This Spoon is based on the original bash/AppleScript implementation found in this directory:
-- `jamf-elevate-wrapper.sh` - Original wrapper script
-- `jamf-elevate.scpt` - Original AppleScript
-- `jamf-elevate.txt` - Original AppleScript source
